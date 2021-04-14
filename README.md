@@ -21,6 +21,11 @@
 
     - This is made using React Native in JavaScript.
 
+## LAYOUTS LOCATION
+    
+    folder: final-layouts-objective
+        - Google Pixel 2 - 1.pdf
+        - Google Pixel 2 - 5.pdf
 # WHAT I USED
 
     - I used ESLint with Airbnb coding style conventions with some own
