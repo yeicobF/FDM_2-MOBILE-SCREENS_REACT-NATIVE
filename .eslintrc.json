@@ -1,0 +1,81 @@
+{
+    "env": {
+        "es2020": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        // https://www.npmjs.com/package/eslint-config-airbnb
+        // eslint-config-airbnb/hooks
+        // This entry point enables the linting rules for React hooks
+        // (requires v16.8+).
+        "airbnb/hooks"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    // REGLAS QUE YA TENÍA GUARDADAS EN UN SNIPPET POR OTRO PROYECTO.
+    "rules": {
+        // DESACTIVO EL HECHO DE QUE NO DEJE PONER "JSX" EN "JS", ya que lo
+        // requiero en estos archivos por React Native.
+        // https://stackoverflow.com/questions/43031126/jsx-not-allowed-in-files-with-extension-js-with-eslint-config-airbnb
+        // Either change your file extensions to .jsx as mentioned or disable
+        // the jsx-filename-extension rule. You can add the following to your
+        // config to allow .js extensions for JSX.
+        "react/jsx-filename-extension": [ 1, {"extensions": [".js"]}],
+        // Con el stylesheet me daba el error por utilizarlo antes de
+        // declararlo, pero así viene en el archivo inicial, así que así lo
+        // dejaré, pero tengo que quitar la regla ("off").
+        // - no-use-before-define
+        // https://eslint.org/docs/rules/no-use-before-define
+        //
+        // NO ACTIVA EL ERROR SOLO CUANDO SE TRATA DE FUNCIONES.
+        "no-use-before-define": ["off", {"functions": true}],
+
+        "linebreak-style": ["off", "windows"],
+        "quotes": ["off", "double"],
+        "no-plusplus": [
+            "error",
+            {
+                "allowForLoopAfterthoughts": true
+            }
+        ],
+        // No se requieren las llaves cuando solo hay un statement dentro del bloque
+        // de if, else, do, while, for
+        "curly": ["error", "multi"], // Pide el statement en la misma línea.
+        
+        // https://eslint.org/docs/rules/nonblock-statement-body-position
+        // Permite que se ponga el statement debajo o a la derecha de la condición
+        // que no requiere braces.
+        "nonblock-statement-body-position": ["error", "any"],
+
+        // Solo pedir una coma al final de un objeto o arreglo cuando se definen en
+        // múltiples líneas.
+        // https://eslint.org/docs/rules/comma-dangle
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
+        // Que no de problemas cuando se utilice el "console.log" ni niguna
+        // operación con "console".
+        "no-console": "off",
+
+        // Muestra una advertencia cuando se declaran variables y no se utilizan.
+        "no-unused-vars": "warn"
+        // https://eslint.org/docs/rules/curly
+        // Esta pide braces si hay más de un statement dentro.
+        // "curly": ["warn", "multi-or-nest"]
+
+        // Permite operadores unitarios (++, --) en el afterthought
+        // (final expression) del for loop.
+        // "allowForLoopAfterthoughts": true
+    }
+}
