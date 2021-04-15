@@ -47,9 +47,9 @@
        display: flex;
        justify-content: space-between;">
     <img src="final-layouts-objective/first-desired-screen.png"
-         alt="First desired screen" title="First desired screen" width="48%">
+         alt="First desired screen" title="First desired screen" width="30%">
     <img src="final-layouts-objective/second-desired-screen.png"
-         alt="Second desired screen" title="Second desired screen" width="48%">
+         alt="Second desired screen" title="Second desired screen" width="30%">
   </div>
 
   <br>
