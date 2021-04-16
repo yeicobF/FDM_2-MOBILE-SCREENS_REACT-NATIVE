@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 // Así importamos los estilos que creamos aparte.
-import { globalStyles } from '../styles/global';
+import globalStyles from '../styles/global';
 
 export default function ProductOverview() {
   return (
