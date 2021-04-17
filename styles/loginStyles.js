@@ -8,16 +8,19 @@ const loginStyles = StyleSheet.create({
   contentWrapper: {
     // Que ocupe TODO EL ESPACIO DE LA PANTALLA.
     flex: 1,
-    padding: 30,
+    margin: 50,
+    marginTop: 100,
+    backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
     // padding: "30 30 30 30",
-    color: "white",
+    // color: "white",
   },
   // Wrapper del contenedor del logo y su texto inferior.
   logoContentWrapper: {
     // Serán 3 contenedores en total, por lo que este medirá 1/3 del padre.
     flex: 1,
+    color: '#F279F2',
     alignItems: 'center',
   },
   logo: {
@@ -29,6 +32,8 @@ const loginStyles = StyleSheet.create({
   // en cuanto al texto,  aplicarían en los hijos, como el "Your Company" en
   // este caso.
   yourCompanyText: {
+    paddingTop: 10,
+    backgroundColor: '#79F2E0',
     fontFamily: 'raleway-variable',
     fontSize: 30,
     fontWeight: "900",
@@ -37,6 +42,21 @@ const loginStyles = StyleSheet.create({
   // CONTENEDOR DE LAS ENTRADAS DE TEXTO: Usuario, Contraseña.
   inputTextWrapper: {
     flex: 1,
+  },
+  // Texto superior a los cuadros con la contraseña.
+  inputTextTopText: {
+    backgroundColor: '#79F2E0',
+    fontFamily: 'raleway-variable',
+    fontSize: 30,
+    fontWeight: "900",
+    color: "black",
+  },
+  // CUADROS DE ENTRADA DE TEXTO.
+  inputTextSquare: {
+    borderRadius: 2,
+    borderColor: 'purple',
+    // Para que el texto de dentro tenga padding.
+    padding: 10,
   },
   // Contenedor de botones: Login, Sign In.
   buttonsWrapper: {
