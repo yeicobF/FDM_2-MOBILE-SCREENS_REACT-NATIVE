@@ -13,46 +13,40 @@
 // import React, { useState, useEffect } from 'react';
 //
 
+// -> REACT NAVIGATIOR
+//
+// https:/ / reactnavigation.org / docs / 6.x / getting - started
+//
+// To finalize installation of react-native-gesture-handler, add the following
+// at the top (make sure it's at the top and there's nothing else before it) of
+// your entry file, such as index.js or App.js:
+import 'react-native-gesture-handler';
 import React from 'react'; // <- ESTO SÍ DEJA CORRER LA APP.
 import { View, Text, Image } from 'react-native';
-import { AppLoading } from 'expo';
+// import { AppLoading } from 'expo';
 // import { StatusBar } from 'expo-status-bar';
 
 // expo install @expo-google-fonts/raleway
 // https://www.youtube.com/watch?v=LBmsecuEXNQ&ab_channel=DesignIntoCode
-import {
-  useFonts,
-  Raleway_100Thin,
-  Raleway_300Light,
-  Raleway_400Regular,
-  Raleway_500Medium,
-} from '@expo-google-fonts/raleway';
+// import {
+//   useFonts,
+//   Raleway_100Thin,
+//   Raleway_300Light,
+//   Raleway_400Regular,
+//   Raleway_500Medium,
+//   Raleway_900Black,
+// 
+// } from '@expo-google-fonts/raleway';
 
 // Así importamos los estilos que creamos aparte.
 import globalStyles from '../styles/global';
 import loginStyles from '../styles/loginStyles';
 
 // EL LOGO DEL LOGIN, para evitar el require() dentro del source.
-const loginLogo = require('../img/login/logo.png');
+const loginLogo = require('../assets/img/login/logo.png');
 
 // Función principal.
 export default function Login() {
-  // ESPERAR A QUE CARGUEN LAS FUENTES.
-  // NO FUNCIONA. Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: null.
-  // 
-  // FUENTE: https://www.youtube.com/watch?v=LBmsecuEXNQ&ab_channel=DesignIntoCode
-  // 
-//   const [fontsLoaded, error] = useFonts({
-//     Raleway_100Thin,
-//     Raleway_300Light,
-//     Raleway_400Regular,
-//     Raleway_500Medium,
-//   });
-// 
-//   // Si no se han cargado las fuentes.
-//   if (!fontsLoaded)
-//     return <AppLoading />;
-
   return (
     <View style={loginStyles.contentWrapper}>
       <View style={loginStyles.logoContentWrapper}>
@@ -69,9 +63,9 @@ export default function Login() {
 
         />
         {/* <Text style={{ fontFamily: Raleway_500Medium, fontSize: 50 }}> */}
-        <Text style={loginStyles.yourCompanyText}>
+        {/* <Text style={{ fontFamily: Raleway_900Black, fontSize: 30 }}>
           Your Company
-        </Text>
+        </Text> */}
       </View>
     </View>
   );

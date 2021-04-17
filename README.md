@@ -78,3 +78,17 @@
 >
 > - Expo Developer Tools to see the changes either in web or in the Android
 >   device.
+>
+> ### I HAD TO UPGRADE THE EXPO SDK
+>
+> I had to upgrade the expo SDK to the latest version following the next
+> tutorial in the section ***"Upgrading Your App"***:
+>
+> ***[Upgrading Expo tutorial](https://blog.expo.io/expo-sdk-35-is-now-available-beee0dfafbf4 "Expo SDK 35 is now available - Upgrading Your App")***
+>
+> ### **REACT NAVIGATION - NavigationContainer**
+>
+> I needed to install React Navigation. For that, I followed the tutorials from:
+>
+> - [[Youtube video] React Native Tutorial #19 - React Navigation Setup](https://www.youtube.com/watch?v=OmQCU-3KPms&list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&index=20&ab_channel=TheNetNinja "[Youtube video] React Native Tutorial #19 - React Navigation Setup")
+> - [Getting started with React Navigation 6.x (current)](https://reactnavigation.org/docs/6.x/getting-started "Getting started with React Navigation 6.x (current)")
