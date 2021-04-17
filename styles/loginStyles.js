@@ -19,18 +19,18 @@ const loginStyles = StyleSheet.create({
     // MÁRGENES EN TODOS LADOS.
     margin: 70,
     // EL MARGEN SUPERIOR DE 70 SE SUSTITUYE POR ESTE.
-    marginTop: 103,
+    marginTop: 107,
     // flexDirection: 'row',
     backgroundColor: 'white',
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
     // padding: "30 30 30 30",
     // color: "white",
   },
   // Wrapper del contenedor del logo y su texto inferior.
   logoContentWrapper: {
     // Serán 3 contenedores en total, por lo que este medirá 1/3 del padre.
-    flex: 1,
+    // flex: 1,
     color: '#F279F2',
     alignItems: 'center',
   },

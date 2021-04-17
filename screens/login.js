@@ -28,43 +28,25 @@ const loginLogo = require('../assets/img/login/logo.png');
 const eraseButton = require('../assets/img/login/eraseButton.png');
 
 // Método para no tener que repetir esto con cada ícono de borrado.
-const getEraseIcon = () => (
-  <Image
-    style={loginStyles.eraseIcon}
-    source={eraseButton}
-  />
-);
+// const getEraseIcon = () => (
+//   <Image
+//     style={loginStyles.eraseIcon}
+//     source={eraseButton}
+//   />
+// );
 
 // Métdo para obtener los cuadros de entrada de texto.
-export const GetTextInputSquare = (aboveText, padding) => {
-  const state = [aboveText];
-
-  return (
-    <View style={loginStyles.inputTextWrapper}>
-      <Text style={[loginStyles.inputTextAboveText, { paddingLeft: 0 }]}>
-        {state[0]}
-      </Text>
-      <View style={loginStyles.inputTextSquare}>
-        <TextInput
-          style={loginStyles.inputText}
-          placeholder=""
-        />
-
-        {/* EL ÍCONO QUE DEBE IR DENTRO DEL TEXTINPUT */}
-        <Image
-          style={loginStyles.eraseIcon}
-          source={eraseButton}
-        />
-      </View>
-
-    </View>
-  )
-};
+// const getTextInputSquare = (aboveText) => (
+//
+// );
 
 // Función principal.
 export default function Login() {
   return (
     <View style={loginStyles.contentWrapper}>
+
+{/* ----------------------------- LOGO Y TEXTO ----------------------------- */}
+
       <View style={loginStyles.logoContentWrapper}>
         <Image
           style={loginStyles.logo}
@@ -81,32 +63,49 @@ export default function Login() {
         <Text style={loginStyles.yourCompanyText}>
           Your Company
         </Text>
-        <View style={loginStyles.inputTextWrapper}>
-          <View>
-            <Text style={loginStyles.inputTextAboveText}>
-              Usuario
-            </Text>
-            <View style={loginStyles.inputTextSquare}>
-              <TextInput
-                style={loginStyles.inputText}
-                placeholder=""
-              />
-              <Image
-                style={loginStyles.eraseIcon}
-                source={eraseButton}
-              />
-            </View>
-          </View>
-
-          <View {GetTextInputSquare("Contraseña", "")} />
-
-        </View>
-
-        <View styles={loginStyles.buttonsWrapper}>
-
-        </View>
-      
       </View>
+
+{/* -------------------------- ENTRADA DE TEXTO ---------------------------- */}
+
+      <View style={loginStyles.inputTextWrapper}>
+        <View>
+          <Text style={loginStyles.inputTextAboveText}>
+            Usuario
+          </Text>
+          <View style={loginStyles.inputTextSquare}>
+            <TextInput
+              style={loginStyles.inputText}
+              placeholder=""
+            />
+            <Image
+              style={loginStyles.eraseIcon}
+              source={eraseButton}
+            />
+          </View>
+        </View>
+        <View>
+          <Text style={[loginStyles.inputTextAboveText, { paddingLeft: 0 }]}>
+            Contraseña
+          </Text>
+          <View style={loginStyles.inputTextSquare}>
+            <TextInput
+              style={loginStyles.inputText}
+              placeholder=""
+            />
+
+            {/* EL ÍCONO QUE DEBE IR DENTRO DEL TEXTINPUT */}
+            <Image
+              style={loginStyles.eraseIcon}
+              source={eraseButton}
+            />
+          </View>
+        </View>
+      </View>
+
+      <View styles={loginStyles.buttonsWrapper}>
+
+      </View>
+
     </View>
   );
 }
