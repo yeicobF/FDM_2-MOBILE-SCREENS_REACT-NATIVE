@@ -23,20 +23,7 @@
 import 'react-native-gesture-handler';
 import React from 'react'; // <- ESTO SÍ DEJA CORRER LA APP.
 import { View, Text, Image } from 'react-native';
-// import { AppLoading } from 'expo';
-// import { StatusBar } from 'expo-status-bar';
 
-// expo install @expo-google-fonts/raleway
-// https://www.youtube.com/watch?v=LBmsecuEXNQ&ab_channel=DesignIntoCode
-// import {
-//   useFonts,
-//   Raleway_100Thin,
-//   Raleway_300Light,
-//   Raleway_400Regular,
-//   Raleway_500Medium,
-//   Raleway_900Black,
-// 
-// } from '@expo-google-fonts/raleway';
 
 // Así importamos los estilos que creamos aparte.
 import globalStyles from '../styles/global';

@@ -71,7 +71,7 @@
 <!-- > ![Second desired screen](final-layouts-objective/second-desired-screen.png "Second desired screen") -->
 
 ## **WHAT I USED**
-
+>
 > - I used ESLint with Airbnb coding style conventions with some own
 >   personalized rules according to what I like. This was not asked by the
 >   teacher.
@@ -90,5 +90,18 @@
 >
 > I needed to install React Navigation. For that, I followed the tutorials from:
 >
-> - [[Youtube video] React Native Tutorial #19 - React Navigation Setup](https://www.youtube.com/watch?v=OmQCU-3KPms&list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&index=20&ab_channel=TheNetNinja "[Youtube video] React Native Tutorial #19 - React Navigation Setup")
-> - [Getting started with React Navigation 6.x (current)](https://reactnavigation.org/docs/6.x/getting-started "Getting started with React Navigation 6.x (current)")
+> - ***[[Youtube video] React Native Tutorial #19 - React Navigation Setup](https://www.youtube.com/watch?v=OmQCU-3KPms&list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&index=20&ab_channel=TheNetNinja "[Youtube video] React Native Tutorial #19 - React Navigation Setup")***
+> - ***[Getting started with React Navigation 6.x (current)](https://reactnavigation.org/docs/6.x/getting-started "Getting started with React Navigation 6.x (current)")***
+>
+> ### HOW TO USE CUSTOM FONTS
+>
+> For this, I followed the tutorial from this video:
+>
+> ***[[Youtube video] React Native Tutorial #17 - Custom Fonts](https://www.youtube.com/watch?v=IY5OBeL9LNE&list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&index=18&ab_channel=TheNetNinja "[Youtube video] React Native Tutorial #17 - Custom Fonts")***
+>
+> ### TUTORIALS I FOLLOWED
+>
+> I followed some tutorials in order to my better understanding of some things.
+>
+> - ***[[35 videos] React Native Tutorial for Beginners [Youtube playlist]](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ "I only watched some videos")***
+> 
