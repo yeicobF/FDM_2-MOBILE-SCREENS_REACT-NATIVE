@@ -170,6 +170,8 @@
     up.
   </p>
   <code style="color: #F1E70D; font-weight: bold; display: flex;">
+    expo install 
+    <code style="color: #D481F5;">react-native-screens</code>@<code style="color: #F167F1;">3.0.0</code>
     <!--
       Quería mantener el espacio después del expo-install, pero no se podía.
       Encontré en este sitio
@@ -178,15 +180,10 @@
       aunque se ve muy mal con tantos estilos y eso. Si supiera otra forma de
       hacerlo, lo haría.
     -->
+    <!--
     <pre style="color: inherit; font-weight: inherit; font-family: inherit;background-color: transparent; margin: 0; padding: 0;">
     expo install 
     </pre>
-    <code style="color: #D481F5;">
-      react-native-screens
-    </code>
-      @
-    <code style="color: #F167F1;">
-      3.0.0
-    </code>
+    -->
   </code>
   </blockquote>
