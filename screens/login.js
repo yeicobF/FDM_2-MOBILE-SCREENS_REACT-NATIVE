@@ -45,21 +45,24 @@ export default function Login() {
           Your Company
         </Text>
         <View style={loginStyles.inputTextWrapper}>
-          <Text style={loginStyles.inputTextAboveText}>
-            Usuario
-          </Text>
-          <TextInput
-            style={loginStyles.inputTextSquare}
-            placeholder=""
-          />
-          <Text style={loginStyles.inputTextAboveText}>
-            Contraseña
-          </Text>
-          <TextInput
-            style={loginStyles.inputTextSquare}
-            placeholder=""
-          />
-
+          <View>
+            <Text style={loginStyles.inputTextAboveText}>
+              Usuario
+            </Text>
+            <TextInput
+              style={loginStyles.inputTextSquare}
+              placeholder=""
+            />
+          </View>
+          <View>
+            <Text style={[loginStyles.inputTextAboveText, {paddingLeft: 0}]}>
+              Contraseña
+            </Text>
+            <TextInput
+              style={loginStyles.inputTextSquare}
+              placeholder=""
+            />
+          </View>
         </View>
       </View>
     </View>

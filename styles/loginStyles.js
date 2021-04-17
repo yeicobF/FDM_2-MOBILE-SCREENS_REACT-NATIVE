@@ -19,7 +19,7 @@ const loginStyles = StyleSheet.create({
     // MÁRGENES EN TODOS LADOS.
     margin: 70,
     // EL MARGEN SUPERIOR DE 70 SE SUSTITUYE POR ESTE.
-    marginTop: 105,
+    marginTop: 103,
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
@@ -34,8 +34,8 @@ const loginStyles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    width: 90,
-    height: 90,
+    width: 98,
+    height: 98,
   },
   // Tengo que hacerlo por separado porque los estilos no se heredan a los
   // elementos anidados como en CSS, por lo que poner las propiedades del padre
@@ -48,16 +48,22 @@ const loginStyles = StyleSheet.create({
     // fontWeight cambia la fuente y no la deja modificar.
     // fontWeight: "500",
     color: "black",
-    paddingTop: 6,
+    height: 45,
+    // QUITAMOS EL PADDING SUPERIOR QUE SE LE HACÍA AL TEXTO.
+    includeFontPadding: false,
+    marginTop: 6,
   },
   // CONTENEDOR DE LAS ENTRADAS DE TEXTO: Usuario, Contraseña.
   inputTextWrapper: {
     flex: 1,
-    marginTop: 92,
+    marginTop: 93,
+    maxHeight: 196,
+    // flexDirection: 'row'
+    justifyContent: 'space-between',
   },
   // Texto superior a los cuadros con la contraseña.
   inputTextAboveText: {
-    paddingLeft: 6,
+    paddingLeft: 7,
     // backgroundColor: '#79F2E0',
     // fontFamily: 'raleway-variable',
     // fontWeight: 'bold',
