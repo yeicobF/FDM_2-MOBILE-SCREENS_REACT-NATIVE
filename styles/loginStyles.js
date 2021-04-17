@@ -31,7 +31,7 @@ const loginStyles = StyleSheet.create({
   yourCompanyText: {
     fontFamily: 'raleway-variable',
     fontSize: 30,
-    fontWeight: 900,
+    fontWeight: "900",
     color: "black",
   },
   // CONTENEDOR DE LAS ENTRADAS DE TEXTO: Usuario, Contraseña.

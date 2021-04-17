@@ -46,7 +46,7 @@ export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   // Si las fuentes aún no se han cargado.
-  if (!fontsLoaded) {
+  if (!fontsLoaded)
     return (// Si aún no cargan las fuentes hay que cargarlas.
       <AppLoading
         // Obtenemos las fuentes.
@@ -57,7 +57,7 @@ export default function App() {
         onError={console.warn}
       />
     );
-  }
+
   // Si ya cargaron las fuentes se puede continuar.
   return (
     // Now, we need to wrap the whole app in NavigationContainer. Usually

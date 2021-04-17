@@ -116,22 +116,67 @@
 > ***[[Youtube video] React Native Tutorial #17 - Custom Fonts](https://www.youtube.com/watch?v=IY5OBeL9LNE&list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&index=18&ab_channel=TheNetNinja "[Youtube video] React Native Tutorial #17 - Custom Fonts")***
 >
 >> ***The method for getting the fonts must be in the entry file, and the defined***
-> ***font styles will be accesible from any file.***
+> ***font styles will be accesible from any file.***  
 >
-> ### TUTORIALS I FOLLOWED
->
+> <br>
+
+## **TUTORIALS I FOLLOWED**
+> <br>
 > I followed some tutorials in order to my better understanding of some things.
 >
 > - ***[[35 videos] React Native Tutorial for Beginners [Youtube playlist]](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ "I only watched some videos")***
->
+> 
+> <br>
 
-## I FOUND A PROBLEM WITH VERSIONS
+## **PROBLEMS I FACED**
+>
+> ### ***I COULD NOT RUN THE APP ON THE PHONE***
+> <br>
+> 
+> #### &emsp;&emsp;***WHAT I FOUND***
+>
+> Every time I tried to run the app from my phone I got an error on the expo
+> app. It said that there had been a problem because of excess of time. I
+> checked in many sites and I couldn't find the solution, until I encountered
+> the next URL:
+>
+>> [](https://stackoverflow.com/questions/43002144/cant-load-expo-app-something-went-wrong)
+>
+> There I found Masoud's answer from "Feb 12 '18" which said the next thing:
+> <blockquote>
+  <blockquote>
+    <cite>
+      For my case, using wireless adapter, I had to make my Network profile
+      private.
+    </cite>
+  </blockquote>
+  <br>
+</blockquote>
+
+>
+> #### &emsp;&emsp;***SOLUTION***
+>
+> I had to turn my network profile from public to private. I assumed that I had
+> it on private, but I did not.
+>
+> #### &emsp;&emsp;**STEPS in a spanish system**
+>>
+>> 1. Go to "Configuración de Windows".
+>> 2. Select "Internet y red".
+>> 3. Go to "Wi-Fi".
+>> 4. Select your network.
+>> 5. The options of public or private networkn is in the section
+>> "Perfil de red".
+>> 6. Select "Privado".
+>> 7. Now it is a private network and the app should run on the phone correctly.
+>
+> ### ***I FOUND A PROBLEM WITH VERSIONS***
 >
 > I found the next problem:
 > Some dependencies are incompatible with the installed expo package version:
 >
-> - `react-native-screens` - expected version range: `~3.0.0`
-> - `actual version installed`: `^3.1.1`
+>> - `react-native-screens` - expected version range: `~3.0.0`
+>> - `actual version installed`: `^3.1.1`
 >
 > Your project may not work correctly until you install the correct versions of
 > the packages.
@@ -139,13 +184,13 @@
 > To install the correct versions of these packages, please run: expo install
 > [package-name ...]
 >
-> ### ***APPARENT SOLUTION***
+> #### &emsp;&emsp;***APPARENT SOLUTION***
 >
 > I found a post where this is pressumably solved:
 >
 > - [[Stack Overflow]React Native - Dependencies are not compatible with currently expo package version when running npm start](https://stackoverflow.com/questions/61785783/react-native-dependencies-are-not-compatible-with-currently-expo-package-versi "[Stack Overflow]React Native - Dependencies are not compatible with currently expo package version when running npm start")
 >
-> **QUESTION'S PROBLEM**
+> ### &emsp;&emsp;**QUESTION'S PROBLEM**
 >
 > `@react-native-community/netinfo` - expected version range: `5.5.1` - actual
 > version installed: `^5.8.1`
@@ -169,21 +214,24 @@
     The following solution worked for me. The warning message stopped showing
     up.
   </p>
-  <code style="color: #F1E70D; font-weight: bold; display: flex;">
-    expo install 
-    <code style="color: #D481F5;">react-native-screens</code>@<code style="color: #F167F1;">3.0.0</code>
-    <!--
-      Quería mantener el espacio después del expo-install, pero no se podía.
-      Encontré en este sitio
-      - https://www.computerhope.com/issues/ch001662.htm#:~:text=To%20create%20extra%20spaces%20before,breaking%20space)%20extended%20HTML%20character.
-      Que con el tag <pre> se conservan los espacios y eso. Por eso la utilcé,
-      aunque se ve muy mal con tantos estilos y eso. Si supiera otra forma de
-      hacerlo, lo haría.
-    -->
-    <!--
-    <pre style="color: inherit; font-weight: inherit; font-family: inherit;background-color: transparent; margin: 0; padding: 0;">
-    expo install 
-    </pre>
-    -->
-  </code>
+  <blockquote>
+    <code style="color: #F1E70D; font-weight: bold; display: inline-block;">
+      expo install
+      <code style="color: #D481F5;">react-native-screens</code>@<code style="color: #F167F1;">3.0.0</code>
+      <!--
+        Quería mantener el espacio después del expo-install, pero no se podía.
+        Encontré en este sitio
+        - https://www.computerhope.com/issues/ch001662.htm#:~:text=To%20create%20extra%20spaces%20before,breaking%20space)%20extended%20HTML%20character.
+        Que con el tag <pre> se conservan los espacios y eso. Por eso la utilcé,
+        aunque se ve muy mal con tantos estilos y eso. Si supiera otra forma de
+        hacerlo, lo haría.
+      -->
+      <!--
+      <pre style="color: inherit; font-weight: inherit; font-family: inherit;background-color: transparent; margin: 0; padding: 0;">
+      expo install 
+      </pre>
+      -->
+    </code>
   </blockquote>
+  <br>
+</blockquote>
