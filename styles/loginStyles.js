@@ -2,16 +2,6 @@
 
 import { StyleSheet } from 'react-native';
 
-// expo install @expo-google-fonts/raleway
-// https://www.youtube.com/watch?v=LBmsecuEXNQ&ab_channel=DesignIntoCode
-import {
-  Raleway_100Thin,
-  Raleway_300Light,
-  Raleway_400Regular,
-  Raleway_500Medium,
-  Raleway_900Black,
-} from '@expo-google-fonts/raleway';
-
 const loginStyles = StyleSheet.create({
   // Wrapper de TODO el contenido, ya que está como centrado con unos paddings
   // a los alrededores y todo está ahí dentro.
@@ -39,9 +29,9 @@ const loginStyles = StyleSheet.create({
   // en cuanto al texto,  aplicarían en los hijos, como el "Your Company" en
   // este caso.
   yourCompanyText: {
-    fontFamily: Raleway_900Black,
+    fontFamily: 'raleway-variable',
     fontSize: 30,
-    // fontWeight: 700,
+    fontWeight: 900,
     color: "black",
   },
   // CONTENEDOR DE LAS ENTRADAS DE TEXTO: Usuario, Contraseña.

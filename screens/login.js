@@ -12,18 +12,8 @@
 //
 // import React, { useState, useEffect } from 'react';
 //
-
-// -> REACT NAVIGATIOR
-//
-// https:/ / reactnavigation.org / docs / 6.x / getting - started
-//
-// To finalize installation of react-native-gesture-handler, add the following
-// at the top (make sure it's at the top and there's nothing else before it) of
-// your entry file, such as index.js or App.js:
-import 'react-native-gesture-handler';
 import React from 'react'; // <- ESTO SÍ DEJA CORRER LA APP.
 import { View, Text, Image } from 'react-native';
-
 
 // Así importamos los estilos que creamos aparte.
 import globalStyles from '../styles/global';
@@ -49,10 +39,9 @@ export default function Login() {
           // }}
 
         />
-        {/* <Text style={{ fontFamily: Raleway_500Medium, fontSize: 50 }}> */}
-        {/* <Text style={{ fontFamily: Raleway_900Black, fontSize: 30 }}>
+        <Text style={loginStyles.yourCompanyText}>
           Your Company
-        </Text> */}
+        </Text>
       </View>
     </View>
   );
