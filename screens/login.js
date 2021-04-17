@@ -27,6 +27,40 @@ import loginStyles from '../styles/loginStyles';
 const loginLogo = require('../assets/img/login/logo.png');
 const eraseButton = require('../assets/img/login/eraseButton.png');
 
+// Método para no tener que repetir esto con cada ícono de borrado.
+const getEraseIcon = () => (
+  <Image
+    style={loginStyles.eraseIcon}
+    source={eraseButton}
+  />
+);
+
+// Métdo para obtener los cuadros de entrada de texto.
+export const GetTextInputSquare = (aboveText, padding) => {
+  const state = [aboveText];
+
+  return (
+    <View style={loginStyles.inputTextWrapper}>
+      <Text style={[loginStyles.inputTextAboveText, { paddingLeft: 0 }]}>
+        {state[0]}
+      </Text>
+      <View style={loginStyles.inputTextSquare}>
+        <TextInput
+          style={loginStyles.inputText}
+          placeholder=""
+        />
+
+        {/* EL ÍCONO QUE DEBE IR DENTRO DEL TEXTINPUT */}
+        <Image
+          style={loginStyles.eraseIcon}
+          source={eraseButton}
+        />
+      </View>
+
+    </View>
+  )
+};
+
 // Función principal.
 export default function Login() {
   return (
@@ -52,31 +86,20 @@ export default function Login() {
             <Text style={loginStyles.inputTextAboveText}>
               Usuario
             </Text>
-            <TextInput
-              style={loginStyles.inputTextSquare}
-              placeholder=""
-            >
+            <View style={loginStyles.inputTextSquare}>
+              <TextInput
+                style={loginStyles.inputText}
+                placeholder=""
+              />
               <Image
                 style={loginStyles.eraseIcon}
                 source={eraseButton}
               />
-            </TextInput>
+            </View>
           </View>
-          <View>
-            <Text style={[loginStyles.inputTextAboveText, { paddingLeft: 0 }]}>
-              Contraseña
-            </Text>
-            <TextInput
-              style={loginStyles.inputTextSquare}
-              placeholder=""
-            >
-              {/* EL ÍCONO QUE DEBE IR DENTRO DEL TEXTINPUT */}
-              <Image
-                style={loginStyles.eraseIcon}
-                source={eraseButton}
-              />
-            </TextInput>
-          </View>
+
+          <View {GetTextInputSquare("Contraseña", "")} />
+
         </View>
 
         <View styles={loginStyles.buttonsWrapper}>

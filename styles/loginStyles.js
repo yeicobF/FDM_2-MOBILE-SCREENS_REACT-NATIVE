@@ -76,6 +76,8 @@ const loginStyles = StyleSheet.create({
   },
   // CUADROS DE ENTRADA DE TEXTO.
   inputTextSquare: {
+    flexDirection: 'row',
+
     borderRadius: 5,
     borderWidth: 3,
     borderColor: purpleTones[3],
@@ -83,13 +85,23 @@ const loginStyles = StyleSheet.create({
     minHeight: 62,
     // Para que el texto de dentro tenga padding.
     padding: 10,
-    // justifyContent: 'center',
-    // alignItems: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  // SOLAMENTE LO DE LA ENTRADA DE TEXTO.
+  inputText: {
+    flex: 1,
+    fontFamily: 'raleway-medium',
+    fontSize: 20,
+    includeFontPadding: false,
   },
   eraseIcon: {
-    width: 35,
-    height: 35,
-    padding: 1,
+    resizeMode: 'contain',
+    // aspectRatio: 1,
+    // width: ,
+    height: 30,
+    width: 30,
+    marginLeft: 5,
     // justifyContent: 'flex-end',
     // alignSelf: 'flex-end',
   },
