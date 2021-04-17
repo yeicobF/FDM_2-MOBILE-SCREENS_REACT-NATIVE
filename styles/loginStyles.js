@@ -2,14 +2,24 @@
 
 import { StyleSheet } from 'react-native';
 
+// VARIABLE CON LOS TONOS DEL PÚRPURA, PARA VER CUÁL UTILIZAR.
+const purpleTones = [
+  "#7c54c4",
+  "#9474cc",
+  "#845cc4",
+  "#6e41bc",
+];
+
 const loginStyles = StyleSheet.create({
   // Wrapper de TODO el contenido, ya que está como centrado con unos paddings
   // a los alrededores y todo está ahí dentro.
   contentWrapper: {
     // Que ocupe TODO EL ESPACIO DE LA PANTALLA.
     flex: 1,
-    margin: 50,
-    marginTop: 100,
+    // MÁRGENES EN TODOS LADOS.
+    margin: 70,
+    // EL MARGEN SUPERIOR DE 70 SE SUSTITUYE POR ESTE.
+    marginTop: 105,
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
@@ -24,37 +34,46 @@ const loginStyles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    width: 80,
-    height: 80,
+    width: 90,
+    height: 90,
   },
   // Tengo que hacerlo por separado porque los estilos no se heredan a los
   // elementos anidados como en CSS, por lo que poner las propiedades del padre
   // en cuanto al texto,  aplicarían en los hijos, como el "Your Company" en
   // este caso.
   yourCompanyText: {
-    paddingTop: 10,
-    backgroundColor: '#79F2E0',
-    fontFamily: 'raleway-variable',
-    fontSize: 30,
-    fontWeight: "900",
+    // backgroundColor: '#79F2E0',
+    fontFamily: 'raleway-medium',
+    fontSize: 34,
+    // fontWeight cambia la fuente y no la deja modificar.
+    // fontWeight: "500",
     color: "black",
+    paddingTop: 6,
   },
   // CONTENEDOR DE LAS ENTRADAS DE TEXTO: Usuario, Contraseña.
   inputTextWrapper: {
     flex: 1,
+    marginTop: 92,
   },
   // Texto superior a los cuadros con la contraseña.
-  inputTextTopText: {
-    backgroundColor: '#79F2E0',
-    fontFamily: 'raleway-variable',
-    fontSize: 30,
-    fontWeight: "900",
-    color: "black",
+  inputTextAboveText: {
+    paddingLeft: 6,
+    // backgroundColor: '#79F2E0',
+    // fontFamily: 'raleway-variable',
+    // fontWeight: 'bold',
+    // fontFamily: 'raleway-bold',
+    fontFamily: 'raleway-bold',
+    fontSize: 11,
+    color: purpleTones[3],
+    marginBottom: 3,
   },
   // CUADROS DE ENTRADA DE TEXTO.
   inputTextSquare: {
-    borderRadius: 2,
-    borderColor: 'purple',
+    borderRadius: 5,
+    borderWidth: 3,
+    borderColor: purpleTones[3],
+    minWidth: '100%',
+    minHeight: 62,
     // Para que el texto de dentro tenga padding.
     padding: 10,
   },

@@ -38,6 +38,10 @@ import ProductOverview from './screens/product-overview';
 const getFonts = () => Font.loadAsync({
   'raleway-italic-variable': require('./assets/fonts/Raleway-Italic-VariableFont_wght.ttf'),
   'raleway-variable': require('./assets/fonts/Raleway-VariableFont_wght.ttf'),
+  'raleway-bold': require('./assets/fonts/static/Raleway-Bold.ttf'),
+  'raleway-black': require('./assets/fonts/static/Raleway-Black.ttf'),
+  'raleway-medium': require('./assets/fonts/static/Raleway-Medium.ttf'),
+  'raleway-light': require('./assets/fonts/static/Raleway-Light.ttf'),
 });
 
 export default function App() {

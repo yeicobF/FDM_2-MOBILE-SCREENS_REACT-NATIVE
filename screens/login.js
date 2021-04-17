@@ -13,7 +13,9 @@
 // import React, { useState, useEffect } from 'react';
 //
 import React from 'react'; // <- ESTO SÍ DEJA CORRER LA APP.
-import { View, Text, Image } from 'react-native';
+import {
+  View, Text, Image, TextInput, SafeAreaView,
+} from 'react-native';
 
 // Así importamos los estilos que creamos aparte.
 import globalStyles from '../styles/global';
@@ -42,6 +44,23 @@ export default function Login() {
         <Text style={loginStyles.yourCompanyText}>
           Your Company
         </Text>
+        <View style={loginStyles.inputTextWrapper}>
+          <Text style={loginStyles.inputTextAboveText}>
+            Usuario
+          </Text>
+          <TextInput
+            style={loginStyles.inputTextSquare}
+            placeholder=""
+          />
+          <Text style={loginStyles.inputTextAboveText}>
+            Contraseña
+          </Text>
+          <TextInput
+            style={loginStyles.inputTextSquare}
+            placeholder=""
+          />
+
+        </View>
       </View>
     </View>
   );
