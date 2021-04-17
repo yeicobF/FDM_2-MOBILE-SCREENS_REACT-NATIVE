@@ -14,8 +14,10 @@
 //
 import React from 'react'; // <- ESTO SÍ DEJA CORRER LA APP.
 import {
-  View, Text, Image, TextInput, SafeAreaView,
+  View, Text, Image, TextInput,
 } from 'react-native';
+
+// import { Icon } from 'react-native-elements';
 
 // Así importamos los estilos que creamos aparte.
 import globalStyles from '../styles/global';
@@ -23,6 +25,7 @@ import loginStyles from '../styles/loginStyles';
 
 // EL LOGO DEL LOGIN, para evitar el require() dentro del source.
 const loginLogo = require('../assets/img/login/logo.png');
+const eraseButton = require('../assets/img/login/eraseButton.png');
 
 // Función principal.
 export default function Login() {
@@ -52,18 +55,34 @@ export default function Login() {
             <TextInput
               style={loginStyles.inputTextSquare}
               placeholder=""
-            />
+            >
+              <Image
+                style={loginStyles.eraseIcon}
+                source={eraseButton}
+              />
+            </TextInput>
           </View>
           <View>
-            <Text style={[loginStyles.inputTextAboveText, {paddingLeft: 0}]}>
+            <Text style={[loginStyles.inputTextAboveText, { paddingLeft: 0 }]}>
               Contraseña
             </Text>
             <TextInput
               style={loginStyles.inputTextSquare}
               placeholder=""
-            />
+            >
+              {/* EL ÍCONO QUE DEBE IR DENTRO DEL TEXTINPUT */}
+              <Image
+                style={loginStyles.eraseIcon}
+                source={eraseButton}
+              />
+            </TextInput>
           </View>
         </View>
+
+        <View styles={loginStyles.buttonsWrapper}>
+
+        </View>
+      
       </View>
     </View>
   );

@@ -20,6 +20,7 @@ const loginStyles = StyleSheet.create({
     margin: 70,
     // EL MARGEN SUPERIOR DE 70 SE SUSTITUYE POR ESTE.
     marginTop: 103,
+    // flexDirection: 'row',
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
@@ -82,6 +83,15 @@ const loginStyles = StyleSheet.create({
     minHeight: 62,
     // Para que el texto de dentro tenga padding.
     padding: 10,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+  },
+  eraseIcon: {
+    width: 35,
+    height: 35,
+    padding: 1,
+    // justifyContent: 'flex-end',
+    // alignSelf: 'flex-end',
   },
   // Contenedor de botones: Login, Sign In.
   buttonsWrapper: {
