@@ -94,6 +94,11 @@
 > - ***[Getting started with React Navigation 6.x (current)](https://reactnavigation.org/docs/6.x/getting-started "Getting started with React Navigation 6.x (current)")***
 > <blockquote>
 > 
+> #### PROBLEMS I HAD
+>
+> - [Gürol Canbek's ANSWER from Props validation for "navigator"](https://stackoverflow.com/questions/46868188/react-navigation-navigation-is-missing-in-props-validation)
+> 
+> 
   <h3><strong><em>HOW TO USE CUSTOM FONTS</em></strong></h3>
   <p>I had to install <code><strong><em>expo-font</em></strong></code> using the following command:</p>
   <!-- white-space: pre; <- AGREGA ESPACIO ANTES Y DESPUÉS DEL TEXTO. -->

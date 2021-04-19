@@ -17,9 +17,9 @@ const loginStyles = StyleSheet.create({
     // Que ocupe TODO EL ESPACIO DE LA PANTALLA.
     flex: 1,
     // MÁRGENES EN TODOS LADOS.
-    margin: 70,
+    padding: 70,
     // EL MARGEN SUPERIOR DE 70 SE SUSTITUYE POR ESTE.
-    marginTop: 107,
+    paddingTop: 107,
     // flexDirection: 'row',
     backgroundColor: 'white',
     // justifyContent: 'center',

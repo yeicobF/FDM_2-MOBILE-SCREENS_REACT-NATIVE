@@ -18,15 +18,20 @@ import {
   View, Text, Image, TextInput, Button, TouchableOpacity,
 } from 'react-native';
 
+// Para el Prop "navigation".
+// https://stackoverflow.com/questions/46868188/react-navigation-navigation-is-missing-in-props-validation
+import PropTypes from 'prop-types';
+
+// import { NavigationContainer } from '@react-navigation/native';
+
 // TUVE QUE INSTALAR 'react-native-svg'.
 // https://github.com/react-native-svg/react-native-svg#text
 // https://github.com/react-native-svg/react-native-svg#usage
-import Svg from 'react-native-svg';
+// import Svg from 'react-native-svg';
 
 // import { Icon } from 'react-native-elements';
 
 // Así importamos los estilos que creamos aparte.
-import globalStyles from '../styles/global';
 import loginStyles from '../styles/loginStyles';
 
 // EL LOGO DEL LOGIN, para evitar el require() dentro del source.
@@ -66,142 +71,161 @@ const placeTextShadow = (text) => {
 // );
 
 // Función principal.
-export default function Login() {
-  return (
-    <View style={loginStyles.contentWrapper}>
+const Login = ({ navigation }) => (
+  <View style={loginStyles.contentWrapper}>
 
 {/* ----------------------------- LOGO Y TEXTO ----------------------------- */}
 
-      <View style={loginStyles.logoContentWrapper}>
-        <Image
-          style={loginStyles.logo}
-          // ME SALÍA UN ERROR DEL LINTER: Unexpected require();, por eso lo
-          // tuve que poner en una variable.
-          // https://stackoverflow.com/questions/37487007/eslint-es6-redux-global-required-unexpected-require
-          source={loginLogo}
+    <View style={loginStyles.logoContentWrapper}>
+      <Image
+        style={loginStyles.logo}
+        // ME SALÍA UN ERROR DEL LINTER: Unexpected require();, por eso lo
+        // tuve que poner en una variable.
+        // https://stackoverflow.com/questions/37487007/eslint-es6-redux-global-required-unexpected-require
+        source={loginLogo}
 
-          // source={{
-          //   uri: '../img/login/logo.png',
-          // }}
+        // source={{
+        //   uri: '../img/login/logo.png',
+        // }}
 
-        />
-        <Text style={loginStyles.yourCompanyText}>
-          Your Company
-        </Text>
-      </View>
+      />
+      <Text style={loginStyles.yourCompanyText}>
+        Your Company
+      </Text>
+    </View>
 
 {/* -------------------------- ENTRADA DE TEXTO ---------------------------- */}
 
-      <View style={loginStyles.inputTextWrapper}>
-        <View>
-          <Text style={loginStyles.inputTextAboveText}>
-            Usuario
-          </Text>
-          <View style={loginStyles.inputTextSquare}>
-            <TextInput
-              style={loginStyles.inputText}
-              placeholder=""
-              type="email"
-              autoFocus
-            />
-            {/* De esta forma utilizamos el método para obtener el ícono de
-                borrado. */}
-            {getEraseIcon()}
+    <View style={loginStyles.inputTextWrapper}>
+      <View>
+        <Text style={loginStyles.inputTextAboveText}>
+          Usuario
+        </Text>
+        <View style={loginStyles.inputTextSquare}>
+          <TextInput
+            style={loginStyles.inputText}
+            placeholder=""
+            type="email"
+            autoFocus
+          />
+          {/* De esta forma utilizamos el método para obtener el ícono de
+              borrado. */}
+          {getEraseIcon()}
 
-            {/* <Image
-              style={loginStyles.eraseIcon}
-              source={eraseButton}
-            /> */}
-          </View>
-        </View>
-        {/* CONTENEDOR CON TEXTO Y EL INPUT. */}
-        <View>
-          {/*
-            El padding lo especifico porque el estilo tiene un padding mayor
-          */}
-          <Text style={[loginStyles.inputTextAboveText, { paddingLeft: 0 }]}>
-            Contraseña
-          </Text>
-          <View style={loginStyles.inputTextSquare}>
-            <TextInput
-              style={loginStyles.inputText}
-              placeholder=""
-              secureTextEntry
-              type="password"
-            />
-            {/* De esta forma utilizamos el método para obtener el ícono de
-                borrado. */}
-            {getEraseIcon()}
-
-            {/* EL ÍCONO QUE DEBE IR DENTRO DEL TEXTINPUT */}
-            {/* <Image
-              style={loginStyles.eraseIcon}
-              source={eraseButton}
-            /> */}
-          </View>
+          {/* <Image
+            style={loginStyles.eraseIcon}
+            source={eraseButton}
+          /> */}
         </View>
       </View>
+      {/* CONTENEDOR CON TEXTO Y EL INPUT. */}
+      <View>
+        {/*
+          El padding lo especifico porque el estilo tiene un padding mayor
+        */}
+        <Text style={[loginStyles.inputTextAboveText, { paddingLeft: 0 }]}>
+          Contraseña
+        </Text>
+        <View style={loginStyles.inputTextSquare}>
+          <TextInput
+            style={loginStyles.inputText}
+            placeholder=""
+            secureTextEntry
+            type="password"
+          />
+          {/* De esta forma utilizamos el método para obtener el ícono de
+              borrado. */}
+          {getEraseIcon()}
 
-      {/* BOTONES DE LOGIN Y SIGN IN. */}
-      <View style={loginStyles.buttonsWrapper}>
-        {/* ESTO DETECTARÁ LOS CLICKS / TOQUES QUE HAGAMOS */}
-        {/* <TouchableOpacity onPress={}></TouchableOpacity> */}
-        {/* En el onPress se pone el estilo que se pondrá al detectar que el
-            botón se ha presionado. */}
-        <TouchableOpacity>
-          <View
-            style={
-              [
-                loginStyles.button,
-                // ELEVATION ES LA SOMBRA. No enconté otra forma de hacerlo.
-                { elevation: 10 },
-              ]
-            }
+          {/* EL ÍCONO QUE DEBE IR DENTRO DEL TEXTINPUT */}
+          {/* <Image
+            style={loginStyles.eraseIcon}
+            source={eraseButton}
+          /> */}
+        </View>
+      </View>
+    </View>
+
+    {/* BOTONES DE LOGIN Y SIGN IN. */}
+    <View style={loginStyles.buttonsWrapper}>
+      {/* ESTO DETECTARÁ LOS CLICKS / TOQUES QUE HAGAMOS */}
+      {/* <TouchableOpacity onPress={}></TouchableOpacity> */}
+      {/* En el onPress se pone el estilo que se pondrá al detectar que el
+          botón se ha presionado. */}
+      <TouchableOpacity
+        // Así, al dar click al botón de LOGIN, nos manda a la siguiente
+        // pantalla.
+        onPress={() => navigation.navigate('Product Overview')}
+      >
+        <View
+          style={
+            [
+              loginStyles.button,
+              // ELEVATION ES LA SOMBRA. No enconté otra forma de hacerlo.
+              { elevation: 10 },
+            ]
+          }
+        >
+          <Text
+            style={[
+              loginStyles.buttonText,
+              // { zIndex: 1 },
+            ]}
           >
+            LOGIN
+          </Text>
+          {placeTextShadow("LOGIN")}
+
+          {/* ESTO NO FUNCIONÓ */}
+          {/* BORDE DE LA FUENTE con SVG */}
+          {/* <Svg height="60" width="200">
             <Text
-              style={[
-                loginStyles.buttonText,
-                // { zIndex: 1 },
-              ]}
+              style={loginStyles.buttonTextWithSVG}
+              fill="white"
+              stroke="purple"
+              x="100"
+              y="20"
+              textAnchor="middle"
             >
               LOGIN
             </Text>
-            {placeTextShadow("LOGIN")}
-
-            {/* ESTO NO FUNCIONÓ */}
-            {/* BORDE DE LA FUENTE con SVG */}
-            {/* <Svg height="60" width="200">
-              <Text
-                style={loginStyles.buttonTextWithSVG}
-                fill="white"
-                stroke="purple"
-                x="100"
-                y="20"
-                textAnchor="middle"
-              >
-                LOGIN
-              </Text>
-            </Svg> */}
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <View
-            style={
-              [
-                loginStyles.button,
-                // ELEVATION ES LA SOMBRA. No enconté otra forma de hacerlo.
-                { elevation: 18 },
-              ]
-            }
-          >
-            <Text style={loginStyles.buttonText}>
-              SIGN IN
-            </Text>
-            {placeTextShadow("SIGN IN")}
-          </View>
-        </TouchableOpacity>
-      </View>
-
+          </Svg> */}
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        // Así, al dar click al botón de LOGIN, nos manda a la siguiente
+        // pantalla.
+        onPress={() => navigation.navigate('Product Overview')}
+      >
+        <View
+          style={
+            [
+              loginStyles.button,
+              // ELEVATION ES LA SOMBRA. No enconté otra forma de hacerlo.
+              { elevation: 18 },
+            ]
+          }
+        >
+          <Text style={loginStyles.buttonText}>
+            SIGN IN
+          </Text>
+          {placeTextShadow("SIGN IN")}
+        </View>
+      </TouchableOpacity>
     </View>
-  );
-}
+
+  </View>
+);
+
+// Para poder utilizar el "navigation" para cambiar de pantallas.
+// https://stackoverflow.com/questions/46868188/react-navigation-navigation-is-missing-in-props-validation
+// 
+// NECESITAMOS HACER UNA "PROPS VALIDATION".
+Login.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
+};
+
+
+export default Login;

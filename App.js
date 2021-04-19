@@ -9,9 +9,11 @@ import 'react-native-gesture-handler';
 // useState es para ver si las fuentes ya cargaron.
 import React, { useState } from 'react';
 // Para navegar entre pantallas.
-import { NavigationContainer } from '@react-navigation/native';
+// import { NavigationContainer } from '@react-navigation/native';
+
 // Importar lo que utilizaremos para las fuentes.
 import * as Font from 'expo-font';
+
 // Para cargar las fuentes si es que aún no se cargan.
 // ME SALIÓ UN ERROR:
 //
@@ -29,9 +31,15 @@ import * as Font from 'expo-font';
 //    onError = { console.warn }
 import AppLoading from 'expo-app-loading'; // expo install expo-app-loading
 
+// IMPORTAMOS EL NAVEGADOR DE PANTALLAS.
+// Le podemos poner el nombre que queramos porque fue un
+// "default expo".
+// import ScreenNavigator from './routes/appNavigatorFromVideo';
+import AppNavigator from './routes/appNavigator';
+
 // PANTALLAS DE LAS CARPETAS DEL PROYECTO.
-import Login from './screens/login';
-import ProductOverview from './screens/product-overview';
+// import Login from './screens/login';
+// import ProductOverview from './screens/productOverview';
 
 // Obtener las fuentes desde la carpeta en donde las descargué.
 // -> ESTO DEBE DE ESTAR EN EL ARCHIVO DE ENTRADA, EN EL PRINCIPAL.
@@ -63,15 +71,19 @@ export default function App() {
     );
 
   // Si ya cargaron las fuentes se puede continuar.
+  // Es decir, que la App va a comenzar.
   return (
+    <AppNavigator />
+    // LO DE ABAJO ERA LO QUE HABÍA VISTO EN LA DOCUMENTACIÓN, PERO AL FINAL LO
+    // HICE DIFERENTE.
     // Now, we need to wrap the whole app in NavigationContainer. Usually
     // you'do this in your entry file, such as index.js or App.js
     // https://reactnavigation.org/docs/6.x/getting-started/
-    <NavigationContainer>
-      {
-        // Regresamos la pantalla del Login.
-        <Login />
-    }
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   {
+    //     // Regresamos la pantalla del Login.
+    //     <Login />
+    // }
+    // </NavigationContainer>
   );
 }
