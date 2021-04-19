@@ -18,6 +18,11 @@ import {
   View, Text, Image, TextInput, Button, TouchableOpacity,
 } from 'react-native';
 
+// TUVE QUE INSTALAR 'react-native-svg'.
+// https://github.com/react-native-svg/react-native-svg#text
+// https://github.com/react-native-svg/react-native-svg#usage
+import * as Svg from 'react-native-svg';
+
 // import { Icon } from 'react-native-elements';
 
 // Así importamos los estilos que creamos aparte.

@@ -118,7 +118,7 @@ const loginStyles = StyleSheet.create({
   },
   button: {
     backgroundColor: "#ff6c3c",
-    color: "#ff6c3c",
+    // color: "#ff6c3c",
     // flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -130,7 +130,19 @@ const loginStyles = StyleSheet.create({
       height: 0,
       width: 0,
     },
-    borderRadius: 6,
+    borderRadius: 4,
+  },
+  // Es el texto que utilizaré para ponerle bordes con SVG, dado que fue la
+  // respuesta que encontré para hacerlo.
+  // https://stackoverflow.com/questions/60377239/adding-a-solid-stroke-to-text
+  buttonTextWithSVG: {
+    fontSize: 20,
+    fontWeight: "bold",
+    // fill: "none",
+    // stroke: "purple",
+    // x: "100",
+    // y: "20",
+    // textAnchor: "middle",
   },
   buttonText: {
     fontFamily: 'raleway-bold',
@@ -139,7 +151,7 @@ const loginStyles = StyleSheet.create({
       height: 0,
       width: 0,
     },
-    textShadowRadius: 3,
+    textShadowRadius: 1,
     color: '#FFFFFF',
     textShadowColor: 'black',
     shadowOpacity: 1,

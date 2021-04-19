@@ -115,8 +115,45 @@
 >
 > ***[[Youtube video] React Native Tutorial #17 - Custom Fonts](https://www.youtube.com/watch?v=IY5OBeL9LNE&list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&index=18&ab_channel=TheNetNinja "[Youtube video] React Native Tutorial #17 - Custom Fonts")***
 >
->> ***The method for getting the fonts must be in the entry file, and the defined***
-> ***font styles will be accesible from any file.***  
+>> ***The method for getting the fonts must be in the entry file, and the***
+> ***defined font styles will be accesible from any file.***  
+>
+> ### ***REACT NATIVE SVG***
+>
+> In order to use put a stroke (border) to the font, I had to install
+> '`react-native-svg`'. I used it in the login screen. I found this solution
+> here, in "*Vencovsky*"'s answer:
+>
+> [\[Stack Overflow\]Adding a solid stroke to Text](https://stackoverflow.com/questions/60377239/adding-a-solid-stroke-to-text "[Stack Overflow] Adding a solid stroke to Text")
+>
+> #### **INSTALATION**
+>
+> I followed the steps specified in the git repo's README:
+>
+> [react-native-svg/react-native-svg](https://github.com/react-native-svg/react-native-svg#text "React Native SVG install instruction")
+>
+> #### ***STEPS***
+>
+> 1. Install '`react-native-svg`' with the follwing command:
+>
+> > `expo install react-native-svg`
+>
+> 1. import `Svg` at the top of the file:
+>
+> > import Svg from 'react-native-svg'
+>
+> ### ***NOTE***
+>
+> In the repo's README it specifies this [Usage](https://github.com/react-native-svg/react-native-svg#usage "React Native Usage"):
+>
+> > */\* Use this if you are using Expo*  
+> import `\*` as `Svg` from '`react-native-svg`';  
+> const { Circle, Rect } = `Svg`;  *<- This is specific for the presented problem*
+>                                     *in the site.*  
+> \*/
+>
+> So,  will see if this last thing is the correct way to do it, or if it is the
+> other way.
 >
 > <br>
 
