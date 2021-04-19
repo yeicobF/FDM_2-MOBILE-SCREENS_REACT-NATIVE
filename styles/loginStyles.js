@@ -151,10 +151,21 @@ const loginStyles = StyleSheet.create({
       height: 0,
       width: 0,
     },
-    textShadowRadius: 1,
+    textShadowRadius: 5,
     color: '#FFFFFF',
     textShadowColor: 'black',
     shadowOpacity: 1,
+    // PARA QUE EL TEXTO ORIGINAL VAYA ENCIMA DE LA SOMBRA.
+    zIndex: 1,
+  },
+  // EL BORDE DEL TEXTO DENTRO DEL BOTÓN. No quedó tan bien, pero más o menos.
+  buttonTextBorder: {
+    color: 'black',
+    fontSize: 15,
+    position: 'absolute',
+    left: 14,
+    top: 5,
+    zIndex: 0,
   },
 });
 

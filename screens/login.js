@@ -21,7 +21,7 @@ import {
 // TUVE QUE INSTALAR 'react-native-svg'.
 // https://github.com/react-native-svg/react-native-svg#text
 // https://github.com/react-native-svg/react-native-svg#usage
-import * as Svg from 'react-native-svg';
+import Svg from 'react-native-svg';
 
 // import { Icon } from 'react-native-elements';
 
@@ -40,6 +40,25 @@ const getEraseIcon = () => (
     source={eraseButton}
   />
 );
+
+// Poner la sombra del texto especificado.
+const placeTextShadow = (text) => {
+  // Si se trata del SIGN IN, le ponemos un "left" diferente, ya que con el
+  // mismo del LOGIN queda desacomodado.
+  const leftPos = (text === "SIGN IN") ? 9 : loginStyles.buttonTextBorder.left;
+
+  return (
+    <Text
+      style={[
+        loginStyles.buttonText,
+        loginStyles.buttonTextBorder,
+        { left: leftPos },
+      ]}
+    >
+      {text}
+    </Text>
+  );
+};
 
 // Métdo para obtener los cuadros de entrada de texto.
 // const getTextInputSquare = (aboveText) => (
@@ -130,10 +149,34 @@ export default function Login() {
         {/* En el onPress se pone el estilo que se pondrá al detectar que el
             botón se ha presionado. */}
         <TouchableOpacity>
-          <View style={[loginStyles.button]}>
-            <Text style={loginStyles.buttonText}>
-              LOGIN
-            </Text>
+          <View style={loginStyles.button}>
+
+            <View style={loginStyles.button}>
+              <Text
+                style={[
+                  loginStyles.buttonText,
+                  // { zIndex: 1 },
+                ]}
+              >
+                LOGIN
+              </Text>
+              {placeTextShadow("LOGIN")}
+            </View>
+
+            {/* ESTO NO FUNCIONÓ */}
+            {/* BORDE DE LA FUENTE con SVG */}
+            {/* <Svg height="60" width="200">
+              <Text
+                style={loginStyles.buttonTextWithSVG}
+                fill="white"
+                stroke="purple"
+                x="100"
+                y="20"
+                textAnchor="middle"
+              >
+                LOGIN
+              </Text>
+            </Svg> */}
           </View>
         </TouchableOpacity>
         <TouchableOpacity>
@@ -141,6 +184,7 @@ export default function Login() {
             <Text style={loginStyles.buttonText}>
               SIGN IN
             </Text>
+            {placeTextShadow("SIGN IN")}
           </View>
         </TouchableOpacity>
       </View>
