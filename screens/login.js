@@ -14,7 +14,8 @@
 //
 import React from 'react'; // <- ESTO SÍ DEJA CORRER LA APP.
 import {
-  View, Text, Image, TextInput,
+  // https://medium.com/@ralph1786/building-a-custom-button-in-react-native-ca9bf898d93c
+  View, Text, Image, TextInput, Button, TouchableOpacity,
 } from 'react-native';
 
 // import { Icon } from 'react-native-elements';
@@ -28,12 +29,12 @@ const loginLogo = require('../assets/img/login/logo.png');
 const eraseButton = require('../assets/img/login/eraseButton.png');
 
 // Método para no tener que repetir esto con cada ícono de borrado.
-// const getEraseIcon = () => (
-//   <Image
-//     style={loginStyles.eraseIcon}
-//     source={eraseButton}
-//   />
-// );
+const getEraseIcon = () => (
+  <Image
+    style={loginStyles.eraseIcon}
+    source={eraseButton}
+  />
+);
 
 // Métdo para obtener los cuadros de entrada de texto.
 // const getTextInputSquare = (aboveText) => (
@@ -76,14 +77,24 @@ export default function Login() {
             <TextInput
               style={loginStyles.inputText}
               placeholder=""
+              type="email"
+              autoFocus
             />
-            <Image
+            {/* De esta forma utilizamos el método para obtener el ícono de
+                borrado. */}
+            {getEraseIcon()}
+
+            {/* <Image
               style={loginStyles.eraseIcon}
               source={eraseButton}
-            />
+            /> */}
           </View>
         </View>
+        {/* CONTENEDOR CON TEXTO Y EL INPUT. */}
         <View>
+          {/*
+            El padding lo especifico porque el estilo tiene un padding mayor
+          */}
           <Text style={[loginStyles.inputTextAboveText, { paddingLeft: 0 }]}>
             Contraseña
           </Text>
@@ -91,19 +102,42 @@ export default function Login() {
             <TextInput
               style={loginStyles.inputText}
               placeholder=""
+              secureTextEntry
+              type="password"
             />
+            {/* De esta forma utilizamos el método para obtener el ícono de
+                borrado. */}
+            {getEraseIcon()}
 
             {/* EL ÍCONO QUE DEBE IR DENTRO DEL TEXTINPUT */}
-            <Image
+            {/* <Image
               style={loginStyles.eraseIcon}
               source={eraseButton}
-            />
+            /> */}
           </View>
         </View>
       </View>
 
-      <View styles={loginStyles.buttonsWrapper}>
-
+      {/* BOTONES DE LOGIN Y SIGN IN. */}
+      <View style={loginStyles.buttonsWrapper}>
+        {/* ESTO DETECTARÁ LOS CLICKS / TOQUES QUE HAGAMOS */}
+        {/* <TouchableOpacity onPress={}></TouchableOpacity> */}
+        {/* En el onPress se pone el estilo que se pondrá al detectar que el
+            botón se ha presionado. */}
+        <TouchableOpacity>
+          <View style={[loginStyles.button]}>
+            <Text style={loginStyles.buttonText}>
+              LOGIN
+            </Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={[loginStyles.button]}>
+            <Text style={loginStyles.buttonText}>
+              SIGN IN
+            </Text>
+          </View>
+        </TouchableOpacity>
       </View>
 
     </View>

@@ -121,18 +121,20 @@
 > <br>
 
 ## **TUTORIALS I FOLLOWED**
+>
 > <br>
 > I followed some tutorials in order to my better understanding of some things.
 >
 > - ***[[35 videos] React Native Tutorial for Beginners [Youtube playlist]](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ "I only watched some videos")***
-> 
+>
 > <br>
 
 ## **PROBLEMS I FACED**
 >
 > ### ***I COULD NOT RUN THE APP ON THE PHONE***
+>
 > <br>
-> 
+>
 > #### &emsp;&emsp;***WHAT I FOUND***
 >
 > Every time I tried to run the app from my phone I got an error on the expo

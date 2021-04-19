@@ -59,6 +59,7 @@ const loginStyles = StyleSheet.create({
     flex: 1,
     marginTop: 93,
     maxHeight: 196,
+    minHeight: 196,
     // flexDirection: 'row'
     justifyContent: 'space-between',
   },
@@ -107,7 +108,41 @@ const loginStyles = StyleSheet.create({
   },
   // Contenedor de botones: Login, Sign In.
   buttonsWrapper: {
+    paddingTop: 60,
+    maxHeight: 196,
+    minHeight: 196,
     flex: 1,
+    justifyContent: 'space-around',
+    flexDirection: 'row',
+    // alignItems: 'stretch',
+  },
+  button: {
+    backgroundColor: "#ff6c3c",
+    color: "#ff6c3c",
+    // flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 35,
+    width: 80,
+    shadowColor: 'black',
+    shadowRadius: 15,
+    shadowOffset: {
+      height: 0,
+      width: 0,
+    },
+    borderRadius: 6,
+  },
+  buttonText: {
+    fontFamily: 'raleway-bold',
+    fontSize: 14,
+    textShadowOffset: {
+      height: 0,
+      width: 0,
+    },
+    textShadowRadius: 3,
+    color: '#FFFFFF',
+    textShadowColor: 'black',
+    shadowOpacity: 1,
   },
 });
 
