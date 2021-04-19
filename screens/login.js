@@ -45,7 +45,7 @@ const getEraseIcon = () => (
 const placeTextShadow = (text) => {
   // Si se trata del SIGN IN, le ponemos un "left" diferente, ya que con el
   // mismo del LOGIN queda desacomodado.
-  const leftPos = (text === "SIGN IN") ? 9 : loginStyles.buttonTextBorder.left;
+  const leftPos = (text === "SIGN IN") ? 13.8 : loginStyles.buttonTextBorder.left;
 
   return (
     <Text
@@ -149,19 +149,24 @@ export default function Login() {
         {/* En el onPress se pone el estilo que se pondrá al detectar que el
             botón se ha presionado. */}
         <TouchableOpacity>
-          <View style={loginStyles.button}>
-
-            <View style={loginStyles.button}>
-              <Text
-                style={[
-                  loginStyles.buttonText,
-                  // { zIndex: 1 },
-                ]}
-              >
-                LOGIN
-              </Text>
-              {placeTextShadow("LOGIN")}
-            </View>
+          <View
+            style={
+              [
+                loginStyles.button,
+                // ELEVATION ES LA SOMBRA. No enconté otra forma de hacerlo.
+                { elevation: 10 },
+              ]
+            }
+          >
+            <Text
+              style={[
+                loginStyles.buttonText,
+                // { zIndex: 1 },
+              ]}
+            >
+              LOGIN
+            </Text>
+            {placeTextShadow("LOGIN")}
 
             {/* ESTO NO FUNCIONÓ */}
             {/* BORDE DE LA FUENTE con SVG */}
@@ -180,7 +185,15 @@ export default function Login() {
           </View>
         </TouchableOpacity>
         <TouchableOpacity>
-          <View style={[loginStyles.button]}>
+          <View
+            style={
+              [
+                loginStyles.button,
+                // ELEVATION ES LA SOMBRA. No enconté otra forma de hacerlo.
+                { elevation: 18 },
+              ]
+            }
+          >
             <Text style={loginStyles.buttonText}>
               SIGN IN
             </Text>

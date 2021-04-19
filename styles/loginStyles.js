@@ -79,8 +79,8 @@ const loginStyles = StyleSheet.create({
   inputTextSquare: {
     flexDirection: 'row',
 
-    borderRadius: 5,
-    borderWidth: 3,
+    borderRadius: 4,
+    borderWidth: 2.4,
     borderColor: purpleTones[3],
     minWidth: '100%',
     minHeight: 62,
@@ -117,20 +117,29 @@ const loginStyles = StyleSheet.create({
     // alignItems: 'stretch',
   },
   button: {
+    overflow: 'visible',
+    // elevation es la sombra para android.
+    // elevation: 3,
+
     backgroundColor: "#ff6c3c",
+    // borderColor: "#ff6c3c",
     // color: "#ff6c3c",
     // flex: 1,
+    height: 40,
+    width: 90,
+    borderRadius: 4,
     justifyContent: 'center',
     alignItems: 'center',
-    height: 35,
-    width: 80,
-    shadowColor: 'black',
-    shadowRadius: 15,
-    shadowOffset: {
-      height: 0,
-      width: 0,
-    },
-    borderRadius: 4,
+
+/* ---------------- NO FUNCIONARON LAS SOMBRAS DE ESTA FORMA ---------------- */
+
+    // shadowColor: 'black',
+    // shadowRadius: 10,
+    // shadowOpacity: 0.8,
+    // shadowOffset: {
+    //   height: 0,
+    //   width: 0,
+    // },
   },
   // Es el texto que utilizaré para ponerle bordes con SVG, dado que fue la
   // respuesta que encontré para hacerlo.
@@ -151,7 +160,7 @@ const loginStyles = StyleSheet.create({
       height: 0,
       width: 0,
     },
-    textShadowRadius: 5,
+    textShadowRadius: 3,
     color: '#FFFFFF',
     textShadowColor: 'black',
     shadowOpacity: 1,
@@ -163,8 +172,8 @@ const loginStyles = StyleSheet.create({
     color: 'black',
     fontSize: 15,
     position: 'absolute',
-    left: 14,
-    top: 5,
+    left: 19.5,
+    top: 7.7,
     zIndex: 0,
   },
 });
