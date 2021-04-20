@@ -1,3 +1,6 @@
+# APP_VIDEOS/
+*.mkv
+
 node_modules/**/*
 .expo/*
 npm-debug.*

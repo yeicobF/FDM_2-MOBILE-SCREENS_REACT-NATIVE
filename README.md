@@ -13,6 +13,16 @@
 
 > Thursday, April 15th, 2021
 
+## I DELIVERED IT LATE
+
+> Monday, April 19th, 2021 [5PM]
+>
+> > I only finished the first screen on Monday, April 19th, 2021. But I also
+> plan on finishing the second screen.
+> >
+> > I got a final grade of 8. Only this program was taken in count.
+>  
+
 ## **SCHOOL SUBJECT FOR WHICH THIS WAS MADE**
 
 > ### Fundamentos de Desarrollo Móvil
@@ -57,12 +67,14 @@
     <strong> FINAL RESULT </strong>
   </h3>
   <br>
-  <div style="margin: auto auto auto auto;
-       display: flex;
-       justify-content: space-between;">
-    <!-- <img src="final-layouts-objective/first-desired-screen.png"
-         alt="First desired screen" title="First desired screen" width="48%">
-    <img src="final-layouts-objective/second-desired-screen.png"
+  <div style="
+        margin: auto auto auto auto;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;">
+    <img src="APP_SCREENS/LoginScreen-1.png"
+         alt="First achieved screen - [Monday, Aril 19th, 2021]" title="First achieved screen - [Monday, Aril 19th, 2021]" width="48%">
+    <!-- <img src="final-layouts-objective/second-desired-screen.png"
          alt="Second desired screen" title="Second desired screen" width="48%"> -->
   </div>
   <br>
@@ -123,7 +135,7 @@
 >> ***The method for getting the fonts must be in the entry file, and the***
 > ***defined font styles will be accesible from any file.***  
 >
-> ### ***REACT NATIVE SVG***
+> ### ***REACT NATIVE SVG <- I DID NOT USE IT AT THE END***
 >
 > In order to use put a stroke (border) to the font, I had to install
 > '`react-native-svg`'. I used it in the login screen. I found this solution
@@ -177,6 +189,12 @@
 >
 > <br>
 >
+> ### ***SOLUTION***
+>
+> The real problem was that the Expo app did not have priviledges to appear
+> above other apps, or as it is called in spanish: "***`Aparecer encima`***". That
+> option had to be on, but I had it off. **Turning it on was the solution**.
+>
 > #### &emsp;&emsp;***WHAT I FOUND***
 >
 > Every time I tried to run the app from my phone I got an error on the expo
@@ -198,7 +216,7 @@
 </blockquote>
 
 >
-> #### &emsp;&emsp;***SOLUTION***
+> #### &emsp;&emsp;***ALTERNATIVE SOLUTION***
 >
 > I had to turn my network profile from public to private. I assumed that I had
 > it on private, but I did not.
@@ -272,7 +290,7 @@
       -->
       <!--
       <pre style="color: inherit; font-weight: inherit; font-family: inherit;background-color: transparent; margin: 0; padding: 0;">
-      expo install 
+      expo install
       </pre>
       -->
     </code>

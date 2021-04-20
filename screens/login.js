@@ -219,13 +219,12 @@ const Login = ({ navigation }) => (
 
 // Para poder utilizar el "navigation" para cambiar de pantallas.
 // https://stackoverflow.com/questions/46868188/react-navigation-navigation-is-missing-in-props-validation
-// 
+//
 // NECESITAMOS HACER UNA "PROPS VALIDATION".
 Login.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
 };
-
 
 export default Login;
